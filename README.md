@@ -1,4 +1,4 @@
-# VLSI-LAB-EXPERIMENTS
+# SIMULATION AND IMPLEMENTATION OF LOGIC GATES, ADDERS, AND SUBTRACTOR
 # AIM:
 
    To simulate and synthesis Logic Gates,Adders and Subtractor using vivado 2023.2.
@@ -26,40 +26,10 @@ STEP:7 compare the output with truth table
 # Logic Diagram :
 
 # Logic Gates:
+
 ![image](https://github.com/navaneethans/VLSI-LAB-EXPERIMENTS/assets/6987778/ee17970c-3ac9-4603-881b-88e2825f41a4)
 
-
-# Half Adder:
-
-![image](https://github.com/navaneethans/VLSI-LAB-EXPERIMENTS/assets/6987778/0e1ecb96-0c25-4556-832b-aeeedfdfe7b9)
-
-
-# Full adder:
-
-![image](https://github.com/navaneethans/VLSI-LAB-EXPERIMENTS/assets/6987778/9bb3964c-438f-469d-a3de-c1cca6f323fb)
-
-
-# Half Subtractor:
-
-![image](https://github.com/navaneethans/VLSI-LAB-EXPERIMENTS/assets/6987778/731470b7-eb4e-49f8-8bb7-2994052a7184)
-
-
-
-# Full Subtractor:
-
-![image](https://github.com/navaneethans/VLSI-LAB-EXPERIMENTS/assets/6987778/d66f874b-c1f2-44b3-a035-7149b56430c1)
-
-
-
-# 8 Bit Ripple Carry Adder
-
-![image](https://github.com/navaneethans/VLSI-LAB-EXPERIMENTS/assets/6987778/7385a408-40a5-4203-8050-b72818622d79)
-
-
-
 # VERILOG CODE:
-
-# Logic gates:
 
 module logicgates(a,b,andgate,orgate,xorgate,nandgate,norgate,xnorgate,notgate);
 
@@ -83,7 +53,16 @@ not(norgate,a,b);
 
 endmodule
 
+# Output
+
+![logic gates](https://github.com/riyamicheal/VLSI-LAB-EXP-1/assets/124061774/51068f9d-91a4-4a83-8c93-a04de6a5d24d)
+
+
 # Half Adder:
+
+![image](https://github.com/navaneethans/VLSI-LAB-EXPERIMENTS/assets/6987778/0e1ecb96-0c25-4556-832b-aeeedfdfe7b9)
+
+# Verilog code
 
 module HA(a,b,sum,carry);
 
@@ -97,7 +76,16 @@ and g2(carry,a,b);
 
 endmodule
 
-# Full Adder:
+# Output
+
+![half adder](https://github.com/riyamicheal/VLSI-LAB-EXP-1/assets/124061774/284eb1d3-4b50-40c6-8d64-50f09f5cc0cc)
+
+
+# Full adder:
+
+![image](https://github.com/navaneethans/VLSI-LAB-EXPERIMENTS/assets/6987778/9bb3964c-438f-469d-a3de-c1cca6f323fb)
+
+# Verilog code
 
 module FA(a,b,cin,sum,cout);
 
@@ -119,7 +107,16 @@ or g5(cout,w2,w3);
 
 endmodule
 
+# Output:
+
+![fULL ADDER](https://github.com/riyamicheal/VLSI-LAB-EXP-1/assets/124061774/94eb067e-ff6f-49fa-b91c-7dba1751b741)
+
+
 # Half Subtractor:
+
+![image](https://github.com/navaneethans/VLSI-LAB-EXPERIMENTS/assets/6987778/731470b7-eb4e-49f8-8bb7-2994052a7184)
+
+# Verilog code
 
 module HS(a,b,difference,borrow);
 
@@ -137,7 +134,15 @@ and g3(borrow,w1,b);
 
 endmodule
 
+# Output:
+
+![hs](https://github.com/riyamicheal/VLSI-LAB-EXP-1/assets/124061774/df2d81c5-54ed-4a7f-a4d6-9323dcb09ad4)
+
 # Full Subtractor:
+
+![image](https://github.com/navaneethans/VLSI-LAB-EXPERIMENTS/assets/6987778/d66f874b-c1f2-44b3-a035-7149b56430c1)
+
+# Verilog code
 
 module FS(a,b,bin,difference,bout);
 
@@ -163,7 +168,16 @@ or g7(bout,w4,w5);
 
 endmodule
 
-# Ripple Carry Adder:
+# Output:
+
+![Full subtractor](https://github.com/riyamicheal/VLSI-LAB-EXP-1/assets/124061774/e63cff69-93d7-48fb-b1b5-07c3ab123d9e)
+
+
+# 8 Bit Ripple Carry Adder
+
+![image](https://github.com/navaneethans/VLSI-LAB-EXPERIMENTS/assets/6987778/7385a408-40a5-4203-8050-b72818622d79)
+
+# Verilog code
 
 module fa(a,b,c,sum,carry);
 
@@ -207,33 +221,9 @@ fa fa8(a[7],b[7],c7,sum[7],cout);
 
 endmodule
 
-
-# OUTPUT:
-
-# Logic Gates:
-
-![logic gates](https://github.com/riyamicheal/VLSI-LAB-EXP-1/assets/124061774/51068f9d-91a4-4a83-8c93-a04de6a5d24d)
-
-# Half Adder:
-
-![hald adder](https://github.com/riyamicheal/VLSI-LAB-EXP-1/assets/124061774/284eb1d3-4b50-40c6-8d64-50f09f5cc0cc)
-
-# Full Adder:
-
-![fULL ADDER](https://github.com/riyamicheal/VLSI-LAB-EXP-1/assets/124061774/94eb067e-ff6f-49fa-b91c-7dba1751b741)
-
-# Half Subtractor:
-
-![hs](https://github.com/riyamicheal/VLSI-LAB-EXP-1/assets/124061774/df2d81c5-54ed-4a7f-a4d6-9323dcb09ad4)
-
-# Full Subtractor:
-
-![Full subtractor](https://github.com/riyamicheal/VLSI-LAB-EXP-1/assets/124061774/e63cff69-93d7-48fb-b1b5-07c3ab123d9e)
-
-# Ripple carry Adder:
+# Output:
 
 ![rca](https://github.com/riyamicheal/VLSI-LAB-EXP-1/assets/124061774/4b518955-0312-44e4-b953-e8fdea5c6dcd)
-
 
 
 # RESULT:
